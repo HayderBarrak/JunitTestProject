@@ -15,6 +15,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -57,6 +58,18 @@ public class EmployeeControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.firstName", Matchers.is("Hayder")));
     }
+
+    @Test
+    public void testingSave() throws Exception {
+        Employee employee = new Employee("Hayder", "Barrak");
+        Mockito.when(employeeService.save(employee)).thenReturn(employee);
+
+        MvcResult result =   mockMvc.perform(get("/employee"))
+                .andExpect(status().isOk()).andReturn();
+
+        String content = result.getResponse().getContentAsString();
+    }
+
 
 
 
