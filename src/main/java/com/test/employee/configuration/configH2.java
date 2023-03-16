@@ -1,4 +1,4 @@
-package com.test.car.Configuration;
+package com.test.employee.configuration;
 
 import org.h2.server.web.WebServlet;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;

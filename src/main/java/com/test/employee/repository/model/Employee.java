@@ -1,4 +1,4 @@
-package com.test.car.Repository.Model;
+package com.test.employee.repository.model;
 
 import javax.persistence.Id;
 import javax.persistence.Entity;
@@ -17,6 +17,13 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
     }
+
+    public Employee(Integer id ,String firstName, String lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
 
     public Employee() {
     }

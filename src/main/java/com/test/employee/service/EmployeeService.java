@@ -1,8 +1,8 @@
-package com.test.car.service;
+package com.test.employee.service;
 
-import com.test.car.Configuration.Handlers.RecordNotFoundException;
-import com.test.car.Repository.EmployeeRepository;
-import com.test.car.Repository.Model.Employee;
+import com.test.employee.configuration.Handlers.RecordNotFoundException;
+import com.test.employee.repository.EmployeeRepository;
+import com.test.employee.repository.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

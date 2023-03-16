@@ -1,7 +1,7 @@
-package com.test.car.controller;
+package com.test.employee.controller;
 
-import com.test.car.Repository.Model.Employee;
-import com.test.car.service.EmployeeService;
+import com.test.employee.repository.model.Employee;
+import com.test.employee.service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
