@@ -27,7 +27,7 @@ public class EmployeeControllerTest {
 
     @MockBean
     EmployeeService employeeService;
-
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     MockMvc mockMvc;
 
@@ -45,7 +45,7 @@ public class EmployeeControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$", Matchers.hasSize(2)))
                 .andExpect(jsonPath("$[0].firstName", Matchers.is("Hayder")))
-                .andExpect(jsonPath("$[1].firstName", Matchers.is("Hayder")));
+                .andExpect(jsonPath("$[1].firstName", Matchers.is("Hayder1")));
     }
 
     @Test
