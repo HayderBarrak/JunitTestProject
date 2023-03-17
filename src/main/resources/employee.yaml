@@ -6,11 +6,11 @@ info:
 servers:
   - url: 'http://localhost:8080'
 paths:
-  /empolyee:
+  /employee:
     get:
       tags:
         - employee-controller
-      summary: Get empolyee information
+      summary: Get employee information
       operationId: read
       responses:
         '200':
